@@ -1,6 +1,8 @@
 # BrainDead Background Remover
 
-A lightweight, portable drag-and-drop background removal utility using AI models.
+A lightweight, portable drag-and-drop background removal utility using AI models. Auto transparent, bulk selection, white or black alpha, auto crop and SAM3 support!
+
+## ![BrainDeadBackgroundRemoverBulk](README.assets/BrainDeadBackgroundRemoverBulk.gif)
 
 ## Features
 
@@ -17,15 +19,20 @@ A lightweight, portable drag-and-drop background removal utility using AI models
 - **Auto-save**: Outputs to same folder as input with configurable suffix
 - **Settings Persistence**: Remembers your preferences
 
+![image-20260119124543154](README.assets/image-20260119124543154.png)
+Sticker Mode Adds a colored outline for quick effect!
+
 ## Two Modes
 
 ### Auto Mode (Default) - CPU Only
-Uses rembg with ONNX Runtime. No PyTorch or CUDA required. Works on any machine.
+Uses rembg with ONNX Runtime. No PyTorch or CUDA required. Works on any machine, you can use the simple .exe portable file or the run.bat python portable enviroment.  Fastest way to get going is with the Release - https://github.com/BizaNator/BrainDeadBackgroundRemover/releases
 
 ### SAM3 Mode (Optional) - GPU Required
 Text-based segmentation using Meta's SAM3. Describe what to segment:
 - "person" / "the dog" / "red car"
 - Choose to keep or remove the matched object
+
+![image-20260119121549294](README.assets/image-20260119121549294.png)
 
 **SAM3 Requirements**:
 - Python 3.12+, PyTorch 2.7+, CUDA 12.6+, NVIDIA GPU
