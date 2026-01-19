@@ -1,8 +1,50 @@
-# BrainDead Background Remover
+# 🧠BrainDead Background Remover
 
-A lightweight, portable drag-and-drop background removal utility using AI models. Auto transparent, bulk selection, white or black alpha, auto crop and SAM3 support!
+**Tired of opening Photoshop or ComfyUI just to remove a background?** We were too.
 
-## ![BrainDeadBackgroundRemoverBulk](README.assets/BrainDeadBackgroundRemoverBulk.gif)
+BrainDead Background Remover is a free, lightweight tool that does one thing really well: removes backgrounds from images. Drop your files, get transparent PNGs. That's it.
+
+
+
+[![Download Latest Release](https://img.shields.io/github/v/release/BizaNator/BrainDeadBackgroundRemover?label=Download&style=for-the-badge)](https://github.com/BizaNator/BrainDeadBackgroundRemover/releases/latest)![image-20260119124911887](README.assets/image-20260119124911887.png)
+
+**🧠 BrainDeadGuild**
+
+*Don't Be BrAIn Dead Alone*
+
+*Games | AI | Community*
+
+[![BrainDeadGuild](README.assets/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f427261696e446561644775696c642d436f6d6d756e6974792d707572706c65.svg)](https://braindeadguild.com/Discord) [![BrainDead.TV](README.assets/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f427261696e446561642e54562d4c6f72652d726564.svg)](https://braindead.tv/)
+
+## 🎯 About BrainDeadGuild
+
+**BrainDeadGuild** started in 2008 as a gaming community and evolved into a collaboration of gamers, streamers, AI creators, and game developers. We're focused on:
+
+- 🎮 **Game Development** — UEFN / Fortnite projects
+- 🧠 **AI-Assisted Creation** — tools and workflows
+- 📺 **BrainDead.TV** — shared lore, characters, and worlds (including the City of Brains universe)
+
+The tools we release (like this one) are built for our own game and content pipelines, then shared openly when they're useful to others.
+
+![BrainDeadBackgroundRemoverBulk](README.assets/BrainDeadBackgroundRemoverBulk.gif)
+
+## Quick Start
+
+1. **Download** the exe from [Releases](https://github.com/BizaNator/BrainDeadBackgroundRemover/releases/latest)
+2. **Drop** your image(s) onto the window
+3. **Done** - transparent PNGs saved next to your originals
+
+No installation. No account. No internet required after first run.
+
+## Why This Tool?
+
+- **No subscriptions** - Free forever, no watermarks, no limits
+- **Works offline** - Models download once, then work without internet
+- **Bulk processing** - Drop 100 images, get 100 transparent PNGs
+- **Portable** - Single exe, no installer, runs from USB drive
+- **Privacy first** - Everything runs locally, your images never leave your computer
+
+**Perfect for:** Product photography, social media content, sticker makers, game asset creation, profile pictures, e-commerce listings, or anyone who just needs backgrounds gone fast.
 
 ## Features
 
@@ -20,12 +62,13 @@ A lightweight, portable drag-and-drop background removal utility using AI models
 - **Settings Persistence**: Remembers your preferences
 
 ![image-20260119124543154](README.assets/image-20260119124543154.png)
-Sticker Mode Adds a colored outline for quick effect!
+
+*Sticker Mode adds a colored outline around your subject - perfect for die-cut stickers, social media, or making subjects pop!*
 
 ## Two Modes
 
 ### Auto Mode (Default) - CPU Only
-Uses rembg with ONNX Runtime. No PyTorch or CUDA required. Works on any machine, you can use the simple .exe portable file or the run.bat python portable enviroment.  Fastest way to get going is with the Release - https://github.com/BizaNator/BrainDeadBackgroundRemover/releases
+Uses rembg with ONNX Runtime. No PyTorch or CUDA required. Works on any machine - just download the exe and go!
 
 ### SAM3 Mode (Optional) - GPU Required
 Text-based segmentation using Meta's SAM3. Describe what to segment:
@@ -228,3 +271,30 @@ This application downloads and uses third-party AI models which are **not** cove
 **Important**: To use SAM3, you must agree to Meta's license terms on Hugging Face. Some models may have non-commercial or other usage restrictions. Please review each model's license before use in commercial applications.
 
 See [MODELS.md](MODELS.md) for detailed information about third-party models and their licenses.
+
+---
+
+## Community & Support
+
+**🧠Don't Be BrAIn Dead Alone!**
+
+[![Discord](https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://BrainDeadGuild.com/Discord)
+[![Website](https://img.shields.io/badge/Website-BrainDeadGuild.com-FF6B6B?style=for-the-badge)](https://BrainDeadGuild.com)
+
+- **Discord**: [BrainDeadGuild.com/Discord](https://BrainDeadGuild.com/Discord) - Get help, share creations, suggest features
+- **Website**: [BrainDeadGuild.com](https://BrainDeadGuild.com)
+- **Lore & Content**: [BrainDead.TV](https://BrainDead.TV)
+- **GitHub**: [github.com/BrainDeadGuild](https://github.com/BrainDeadGuild)
+
+### Other BrainDead Tools
+
+Check out our other free tools for creators:
+
+| Tool | Description |
+|------|-------------|
+| [ComfyUI-BrainDead](https://github.com/BizaNator/ComfyUI-BrainDead) | Custom nodes for ComfyUI - character consistency, prompt tools, and more |
+| [BrainDeadBlender](https://github.com/BizaNator/BrainDeadBlender) | Blender add-ons for 3D artists and game developers |
+
+---
+
+*A [Biloxi Studios Inc.](https://BrainDeadGuild.com) Production*
