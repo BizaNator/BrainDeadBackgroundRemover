@@ -1,0 +1,22 @@
+# SAM3 dependencies (OPTIONAL - requires CUDA GPU)
+# Only install if you want text-based segmentation with SAM3
+#
+# Requirements:
+# - Python 3.12+
+# - NVIDIA GPU with CUDA support
+# - ~4GB+ VRAM recommended
+#
+# IMPORTANT: Choose the right CUDA version for your GPU:
+# - RTX 50 series (5090, 5080, 5070): Use cu130
+# - RTX 40/30/20 series and older: Use cu126
+#
+# The app's Install SAM3 button auto-detects this for you!
+#
+# Manual install examples:
+# RTX 50 series:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130
+#   pip install sam3
+#
+# RTX 40/30/20 and older:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+#   pip install sam3

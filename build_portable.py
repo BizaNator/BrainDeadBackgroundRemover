@@ -50,9 +50,25 @@ def main():
         "--onefile",
         "--windowed",
         "--name", "BrainDeadBGRemover",
+        # Core dependencies
         "--hidden-import", "rembg",
         "--hidden-import", "onnxruntime",
         "--hidden-import", "PIL._tkinter_finder",
+        # App modules (modular structure)
+        "--hidden-import", "core",
+        "--hidden-import", "core.constants",
+        "--hidden-import", "core.config",
+        "--hidden-import", "processors",
+        "--hidden-import", "processors.base",
+        "--hidden-import", "processors.rembg_processor",
+        "--hidden-import", "processors.sam3_processor",
+        "--hidden-import", "ui",
+        "--hidden-import", "ui.main_window",
+        "--hidden-import", "ui.dialogs",
+        "--hidden-import", "utils",
+        "--hidden-import", "utils.gpu",
+        "--hidden-import", "utils.image",
+        # Data collection
         "--collect-all", "rembg",
         "--collect-data", "tkinterdnd2",
         str(main_script)

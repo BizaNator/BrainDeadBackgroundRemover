@@ -1,4 +1,6 @@
+# Core dependencies (CPU-only, no PyTorch required)
 rembg[cpu]>=2.0.50
 pillow>=10.0.0
 tkinterdnd2>=0.3.0
 onnxruntime>=1.17.0
+numpy>=1.24.0
