@@ -130,12 +130,28 @@ class BackgroundRemoverApp:
         )
         self.drop_label.pack(expand=True, fill=tk.BOTH)
 
-        # Preview container (hidden initially)
+        # Preview container (hidden initially) - side-by-side original and result
         self.preview_container = tk.Frame(self.drop_frame, bg="#2d2d2d")
-        self.preview_label = tk.Label(self.preview_container, bg="#2d2d2d")
-        self.preview_label.pack(side=tk.LEFT, padx=5, expand=True)
-        self.result_label = tk.Label(self.preview_container, bg="#2d2d2d")
-        self.result_label.pack(side=tk.LEFT, padx=5, expand=True)
+
+        # Left side: Original
+        self.original_frame = tk.Frame(self.preview_container, bg="#2d2d2d")
+        self.original_frame.pack(side=tk.LEFT, padx=5, expand=True)
+        tk.Label(
+            self.original_frame, text="Original", font=("Segoe UI", 9),
+            bg="#2d2d2d", fg="#888888"
+        ).pack()
+        self.preview_label = tk.Label(self.original_frame, bg="#2d2d2d")
+        self.preview_label.pack()
+
+        # Right side: Result
+        self.result_frame = tk.Frame(self.preview_container, bg="#2d2d2d")
+        self.result_frame.pack(side=tk.LEFT, padx=5, expand=True)
+        tk.Label(
+            self.result_frame, text="Result", font=("Segoe UI", 9),
+            bg="#2d2d2d", fg="#888888"
+        ).pack()
+        self.result_label = tk.Label(self.result_frame, bg="#2d2d2d")
+        self.result_label.pack()
 
         # Enable drag and drop
         self.drop_frame.drop_target_register(DND_FILES)
@@ -637,9 +653,13 @@ class BackgroundRemoverApp:
 
         try:
             img = Image.open(file_path)
-            img.thumbnail((PREVIEW_MAX_WIDTH, PREVIEW_MAX_HEIGHT), Image.Resampling.LANCZOS)
 
-            photo = ImageTk.PhotoImage(img)
+            # Create preview with checkerboard background for transparency
+            preview_img = create_checkerboard_preview(
+                img,
+                (PREVIEW_MAX_WIDTH, PREVIEW_MAX_HEIGHT)
+            )
+            photo = ImageTk.PhotoImage(preview_img)
 
             self.drop_label.pack_forget()
             self.preview_container.pack_forget()
@@ -904,7 +924,8 @@ class BackgroundRemoverApp:
         self.process_btn.config(state=tk.DISABLED)
         self.status_var.set(f"Bulk processing: 0/{self.bulk_total} images...")
 
-        self.preview_label.pack_forget()
+        # Hide preview container, show drop label for bulk progress
+        self.preview_container.pack_forget()
         self.drop_label.config(text=f"Processing {self.bulk_total} images...\n\n0/{self.bulk_total} completed")
         self.drop_label.pack(expand=True, fill=tk.BOTH)
 
