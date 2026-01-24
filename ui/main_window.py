@@ -834,10 +834,12 @@ class BackgroundRemoverApp:
             self.root.after(0, lambda: self._on_process_complete(output_path))
 
         except Exception as e:
-            import traceback
             error_msg = str(e) if str(e) else type(e).__name__
-            print(f"Processing error: {error_msg}")
-            traceback.print_exc()
+            try:
+                import traceback
+                traceback.print_exc()
+            except Exception:
+                pass
             self.root.after(0, lambda err=error_msg: self._on_process_error(err))
 
     def _build_processing_options(self) -> dict:
@@ -891,8 +893,8 @@ class BackgroundRemoverApp:
             result_photo = ImageTk.PhotoImage(result_preview)
             self.result_label.config(image=result_photo)
             self.result_label.image = result_photo
-        except Exception as e:
-            print(f"Error showing result preview: {e}")
+        except Exception:
+            pass
 
         # Flash success
         self.drop_frame.config(highlightbackground="#00ff00")
@@ -987,7 +989,6 @@ class BackgroundRemoverApp:
 
     def _on_bulk_item_error(self, file_path: str, error: str):
         self.processing = False
-        print(f"Error processing {file_path}: {error}")
         self._process_next_in_queue()
 
     def _on_bulk_complete(self):

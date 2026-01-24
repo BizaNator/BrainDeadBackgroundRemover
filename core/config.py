@@ -45,8 +45,8 @@ def save_config(config: dict) -> None:
     try:
         with open(config_path, 'w') as f:
             json.dump(config, f, indent=2)
-    except Exception as e:
-        print(f"Failed to save config: {e}")
+    except Exception:
+        pass
 
 
 def get_hf_token() -> str:
