@@ -11,6 +11,16 @@ This is the main entry point. The application has been refactored into modules:
 - utils/: GPU detection, image utilities
 """
 
+import sys
+import os
+
+# Fix for PyInstaller --windowed mode: sys.stdout/stderr are None
+# which causes crashes on any print() call
+if sys.stdout is None:
+    sys.stdout = open(os.devnull, 'w')
+if sys.stderr is None:
+    sys.stderr = open(os.devnull, 'w')
+
 from ui.main_window import BackgroundRemoverApp
 
 
