@@ -14,7 +14,7 @@ BrainDead Background Remover is a free, lightweight tool that does one thing rea
 
 *Games | AI | Community*
 
-[![BrainDeadGuild](README.assets/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f427261696e446561644775696c642d436f6d6d756e6974792d707572706c65.svg)](https://braindeadguild.com/Discord) [![BrainDead.TV](README.assets/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f427261696e446561642e54562d4c6f72652d726564.svg)](https://braindead.tv/)
+[![BrainDeadGuild](README.assets/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f427261696e446561644775696c642d436f6d6d756e6974792d707572706c65.svg)](https://braindeadguild.com/discord) [![BrainDead.TV](README.assets/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f427261696e446561642e54562d4c6f72652d726564.svg)](https://braindead.tv/)
 
 ## 🎯 About BrainDeadGuild
 
@@ -278,10 +278,10 @@ See [MODELS.md](MODELS.md) for detailed information about third-party models and
 
 **🧠Don't Be BrAIn Dead Alone!**
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://BrainDeadGuild.com/Discord)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://BrainDeadGuild.com/discord)
 [![Website](https://img.shields.io/badge/Website-BrainDeadGuild.com-FF6B6B?style=for-the-badge)](https://BrainDeadGuild.com)
 
-- **Discord**: [BrainDeadGuild.com/Discord](https://BrainDeadGuild.com/Discord) - Get help, share creations, suggest features
+- **Discord**: [BrainDeadGuild.com/discord](https://BrainDeadGuild.com/discord) - Get help, share creations, suggest features
 - **Website**: [BrainDeadGuild.com](https://BrainDeadGuild.com)
 - **Lore & Content**: [BrainDead.TV](https://BrainDead.TV)
 - **GitHub**: [github.com/BrainDeadGuild](https://github.com/BrainDeadGuild)
